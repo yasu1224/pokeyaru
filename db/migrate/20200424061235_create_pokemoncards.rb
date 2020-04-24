@@ -4,9 +4,8 @@ class CreatePokemoncards < ActiveRecord::Migration[5.2]
       t.string :card_name, null: false
       t.string :rarity, null: false
       t.string :image, null: false
-      t.string :detail
-      # t.references :category, foreign_key: true
-      # t.references :admin, foreign_key: true
+      t.text :detail
+      t.references :category, foreign_key: true
       t.timestamps
     end
   end
